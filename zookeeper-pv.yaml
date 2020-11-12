@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-zk1
+  annotations:
+    volume.beta.kubernetes.io/storage-class: "nfs-client"     #对应的pv class 名
+  labels:
+    type: nfs
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    path: "/usr/local/data/zookeeper/zk-01"
+    server: 10.0.0.3
+  persistentVolumeReclaimPolicy: Recycle
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-zk2
+  annotations:
+    volume.beta.kubernetes.io/storage-class: "nfs-client"     #对应的pv class 名
+  labels:
+    type: nfs
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    path: "/usr/local/data/zookeeper/zk-02"
+    server: 10.0.0.3
+  persistentVolumeReclaimPolicy: Recycle
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-zk3
+  annotations:
+    volume.beta.kubernetes.io/storage-class: "nfs-client"     #对应的pv class 名
+  labels:
+    type: nfs
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    path: "/usr/local/data/zookeeper/zk-03"
+    server: 10.0.0.3
+  persistentVolumeReclaimPolicy: Recycle
