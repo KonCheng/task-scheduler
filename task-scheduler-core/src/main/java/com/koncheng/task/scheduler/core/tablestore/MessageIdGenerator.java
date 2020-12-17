@@ -1,6 +1,4 @@
-package com.koncheng.task.scheduler.core.zk.tablestore;
-
-import java.util.concurrent.atomic.AtomicLong;
+package com.koncheng.task.scheduler.core.tablestore;
 
 public class MessageIdGenerator {
 

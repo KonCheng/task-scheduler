@@ -1,4 +1,4 @@
-package com.koncheng.task.scheduler.core.zk.tablestore;
+package com.koncheng.task.scheduler.core.tablestore;
 
 import com.alicloud.openservices.tablestore.SyncClient;
 import com.alicloud.openservices.tablestore.model.search.FieldSchema;
