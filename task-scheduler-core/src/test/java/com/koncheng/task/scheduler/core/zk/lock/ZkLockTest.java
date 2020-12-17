@@ -17,7 +17,7 @@ public class ZkLockTest {
             new Thread() {
                 @Override
                 public void run() {
-                    String key = "package1";
+                    String key = "package10";
                     Lock lock = new ZkLock(key);
                     String name = Thread.currentThread().getName();
 

@@ -16,11 +16,11 @@ public class ZooKeeperInstance {
     private static final CountDownLatch LATCH = new CountDownLatch(1);
     private static final String SERVERS = "120.53.100.219:2181,120.53.102.226:2181,49.234.118.75:2181";
     private static ZooKeeper zooKeeper = null;
-    private static final Watcher defaultWatcher = new DefaultWatcher(LATCH);
+    private static final Watcher DEFAULT_WATCHER = new DefaultWatcher(LATCH);
 
     static {
         try {
-            zooKeeper = new ZooKeeper(SERVERS, 1000, defaultWatcher);
+            zooKeeper = new ZooKeeper(SERVERS, 1000, DEFAULT_WATCHER);
             LATCH.await();
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
